@@ -1,0 +1,168 @@
+/* 1. Reset y Tipografía */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.app-header h1 { color: #2c3e50; }
+.app-header p { color: #7f8c8d; font-size: 14px; }
+
+/* 2. Tarjetas y Formulario */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.row .input-group { flex: 1; }
+
+label { font-size: 13px; font-weight: 600; color: #7f8c8d; }
+
+input, textarea, select {
+    padding: 10px;
+    border: 1px solid #dfe6e9;
+    border-radius: 8px;
+    margin-top: 5px;
+    outline: none;
+}
+
+.btn-primary {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover { background: #2980b9; }
+
+/* 3. Botones de Eliminación */
+
+/* Botón Eliminar Todo (Arriba) */
+.btn-danger-small {
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-danger-small:hover { background: #ff6b81; }
+
+/* Icono Papelera (Individual) */
+.btn-delete-task {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px;
+    margin-left: 10px;
+    transition: transform 0.2s;
+}
+
+.btn-delete-task:hover {
+    transform: scale(1.2);
+}
+
+/* 4. Estilos de las Tareas Guardadas */
+
+.task-card {
+    background: white;
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-left: 6px solid #ccc;
+}
+
+/* Colores de Prioridad */
+.task-card.baja { border-left-color: #e74c3c; }  /* Rojo */
+.task-card.media { border-left-color: #2ecc71; } /* Verde */
+.task-card.alta { border-left-color: #3498db; }  /* Azul */
+
+.task-info h3 {
+    font-size: 16px;
+    color: #2c3e50;
+    max-width: 250px;
+}
+
+.task-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.date-time {
+    font-size: 11px;
+    color: #7f8c8d;
+    background: #f1f2f6;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.task-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-label {
+    font-size: 12px;
+    color: #57606f;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.task-checkbox {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}

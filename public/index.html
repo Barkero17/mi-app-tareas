@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Mis Tareas</h1>
+            <p>Organización automática por fecha y prioridad</p>
+        </header>
+
+        <section class="card form-section">
+            <h2>Nueva Tarea</h2>
+            <form id="task-form">
+                <div class="input-group">
+                    <label for="task-title">¿Qué hay que hacer?</label>
+                    <textarea id="task-title" placeholder="Escribe tu tarea aquí..." rows="2" required></textarea>
+                </div>
+                
+                <div class="row">
+                    <div class="input-group">
+                        <label for="task-date">Fecha</label>
+                        <input type="date" id="task-date" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="task-time">Hora</label>
+                        <input type="time" id="task-time" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="task-priority">Prioridad</label>
+                        <select id="task-priority">
+                            <option value="baja">Baja (Rojo)</option>
+                            <option value="media" selected>Media (Verde)</option>
+                            <option value="alta">Alta (Azul)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button type="submit" class="btn-primary">Guardar Tarea</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="task-list">
+            <div class="list-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                <h2>Tu Agenda</h2>
+                <button id="btn-delete-all" class="btn-danger-small">Eliminar todo</button>
+            </div>
+            
+            <div id="task-list-container">
+                <p style="text-align:center; color:gray;">Cargando tareas...</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
