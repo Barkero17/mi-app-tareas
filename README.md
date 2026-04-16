@@ -54,6 +54,10 @@ Si deseas ejecutar este proyecto localmente, sigue estos pasos:
 | Vista Principal Móvil | https://ibb.co/JjTgyCtf        https://ibb.co/Sw5YrzCt
 | Vista Principal PC | https://ibb.co/C35QkdzF           https://ibb.co/HfbdSzvM             https://ibb.co/Rknsd4CN
 
+## Requisitos
+Es necesario tener activado XAMPP con Apache y MySQL activados previamente a la ejecución de estos comandos en el CMD de Windows. El MySQL es necesario tenerlo en el puerto 3306 y si no se hace esto de forma previa, el CMD podría generar errores a la hora de ejecutar la app en nuestro PC de Windows.
+Una vez tenemos todo, hay que abrir nuestro navegador de Internet favorito y escribir en la barra de búsqueda: localhost:3000 y se arrancará la app.
+
 ## 💡 Aprendizaje y Desafíos
 
 Durante el desarrollo de este proyecto, fortalecí mis habilidades en:
