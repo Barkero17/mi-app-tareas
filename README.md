@@ -1,73 +1,48 @@
-# 📝 Mi App de Tareas (To-Do List)
+# 📝 Aplicación Full-Stack de Gestión de Tareas
 
-![Estado del Proyecto](https://img.shields.io/badge/Estado-En%20Desarrollo-green)
-![Licencia](https://img.shields.io/badge/Licencia-MIT-blue)
+Este es un proyecto completo de arquitectura Cliente-Servidor desarrollado como proyecto final para el ciclo de **Desarrollo de Aplicaciones Web (DAW)**. 
 
-Una aplicación web moderna y funcional para la gestión de tareas diarias, diseñada para ayudar a los usuarios a organizar su flujo de trabajo de manera eficiente.
-
-## 🚀 Descripción
-
-**Mi App de Tareas** es una herramienta intuitiva que permite a los usuarios crear, organizar y dar seguimiento a sus tareas pendientes. Este proyecto fue desarrollado enfocándose en la usabilidad, la persistencia de datos y una interfaz limpia.
+La aplicación permite a los usuarios registrarse de forma segura y gestionar sus tareas diarias con opciones avanzadas como asignación de fechas, horas, y niveles de prioridad.
 
 ## ✨ Características Principales
 
-* **Gestión CRUD:** Crear, Leer, Actualizar y Eliminar tareas de forma sencilla.
-* **Interfaz Responsiva:** Diseño adaptable para dispositivos móviles, tablets y escritorio.
-* **Persistencia de Datos:** Las tareas se mantienen guardadas (Local Storage / Base de datos según implementación).
-* **Filtros Inteligentes:** Organiza tus tareas por estado (Completadas, Pendientes, Todas).
-* **Interfaz Moderna:** Estética minimalista con transiciones fluidas.
+* **Sistema de Autenticación:** Registro e inicio de sesión seguro. Las contraseñas se almacenan encriptadas en la base de datos utilizando `bcrypt`.
+* **Protección de Rutas:** El panel de tareas está protegido mediante `sessionStorage`. Si un usuario no está logueado, es redirigido automáticamente al inicio.
+* **CRUD Completo de Tareas:** Los usuarios pueden crear, leer, actualizar (marcar como completadas) y borrar sus propias tareas.
+* **Gestión Avanzada:**
+  * Asignación de fecha y hora límite.
+  * Selector de prioridad (Baja, Media, Alta) con indicadores visuales de colores (Rojo, Verde, Azul).
+  * Ordenación automática: Las tareas más antiguas o urgentes aparecen primero.
+  * Opción de "Borrar todas" las tareas con un solo clic.
 
 ## 🛠️ Tecnologías Utilizadas
 
-Este proyecto fue construido utilizando el siguiente stack tecnológico:
+**Frontend (Cliente):**
+* HTML5 y CSS3
+* JavaScript (Fetch API)
 
-* **Frontend:** HTML5, CSS3, JavaScript
-* **Framework/Librería:** He utilizado el entorno de node.js para el backend. También he utilizado node.js para dar conectividad con MySQL.
-* **Estilos:** He usado Bootstrap para crear el formulario, cuadro donde escribes la tarea y se ve limpio y centrado. También lo he usado para los botones (color de los mismos) y para la lista (list-group) que separan cada tarea con líneas bonitas.
-* **Control de Versiones:** Git & GitHub
+**Backend (Servidor):**
+* **Node.js** con el framework **Express**.
+* `mysql2/promise` para la conexión asíncrona a la base de datos.
+* `bcrypt` para el hashing de contraseñas.
+* `dotenv` para la gestión de variables de entorno de forma segura.
 
-## 📦 Instalación y Uso
+**Base de Datos:**
+* **MySQL** (Relacional)
 
-Si deseas ejecutar este proyecto localmente, sigue estos pasos:
+## 🚀 Instalación y Despliegue Local
 
-1.  **Clona el repositorio:**
-    ```bash
-    git clone https://github.com/Barkero17/mi-app-tareas.git
-    ```
-2.  **Accede al directorio:**
-    ```bash
-    cd mi-app-tareas
-    ```
-3.  **Instala las dependencias (si aplica):**
-    ```bash
-    npm install
-    ```
-4.  **Inicia la aplicación:**
-    ```bash
-    npm start
-    ```
+Sigue estos pasos para ejecutar el proyecto en tu propia máquina:
 
-## 📸 Capturas de Pantalla
+### 1. Requisitos previos
+Necesitas tener instalado en tu ordenador:
+* [Node.js](https://nodejs.org/es/)
+* Un servidor de bases de datos MySQL (como XAMPP, Laragon o MySQL Workbench).
 
-*(Añade aquí imágenes de tu aplicación para que los reclutadores en LinkedIn puedan verla sin entrar al código)*
-
-| Vista Principal Móvil | https://ibb.co/JjTgyCtf        https://ibb.co/Sw5YrzCt
-| Vista Principal PC | https://ibb.co/C35QkdzF           https://ibb.co/HfbdSzvM             https://ibb.co/Rknsd4CN
-
-## Requisitos
-Es necesario tener activado XAMPP con Apache y MySQL activados previamente a la ejecución de estos comandos en el CMD de Windows. El MySQL es necesario tenerlo en el puerto 3306 y si no se hace esto de forma previa, el CMD podría generar errores a la hora de ejecutar la app en nuestro PC de Windows.
-Una vez tenemos todo, hay que abrir nuestro navegador de Internet favorito y escribir en la barra de búsqueda: localhost:3000 y se arrancará la app.
-
-## 💡 Aprendizaje y Desafíos
-
-Durante el desarrollo de este proyecto, fortalecí mis habilidades en:
-* Manipulación del DOM y manejo de eventos.
-* Implementación de lógica para la gestión de estados.
-* Diseño centrado en el usuario (UX).
-
----
-
-## 👤 Autor
+### 2. Clonar el repositorio
+```bash
+git clone [https://github.com/TU_USUARIO/mi-app-tareas.git](https://github.com/TU_USUARIO/mi-app-tareas.git)
+cd mi-app-tareas
 
 **Barkero17**
 * LinkedIn: [Tu Perfil de LinkedIn](https://www.linkedin.com/in/daniel-hern%C3%A1ndez-pe%C3%B1a-565570246/)
