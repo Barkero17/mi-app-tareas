@@ -3,64 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestor de Tareas Pro</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mi App de Tareas - DAW</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Un poco de estilo rápido para separar los formularios */
+        body { font-family: sans-serif; display: flex; justify-content: center; gap: 50px; margin-top: 50px; }
+        .auth-container { border: 1px solid #ccc; padding: 20px; border-radius: 8px; width: 300px; }
+        input { display: block; width: 100%; margin-bottom: 10px; padding: 8px; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; cursor: pointer; background-color: #28a745; color: white; border: none; border-radius: 4px; }
+        h2 { text-align: center; }
+    </style>
 </head>
 <body>
 
-    <div class="app-container">
-        <header class="app-header">
-            <h1>Mis Tareas</h1>
-            <p>Organización automática por fecha y prioridad</p>
-        </header>
-
-        <section class="card form-section">
-            <h2>Nueva Tarea</h2>
-            <form id="task-form">
-                <div class="input-group">
-                    <label for="task-title">¿Qué hay que hacer?</label>
-                    <textarea id="task-title" placeholder="Escribe tu tarea aquí..." rows="2" required></textarea>
-                </div>
-                
-                <div class="row">
-                    <div class="input-group">
-                        <label for="task-date">Fecha</label>
-                        <input type="date" id="task-date" required>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="task-time">Hora</label>
-                        <input type="time" id="task-time" required>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="task-priority">Prioridad</label>
-                        <select id="task-priority">
-                            <option value="baja">Baja (Rojo)</option>
-                            <option value="media" selected>Media (Verde)</option>
-                            <option value="alta">Alta (Azul)</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="actions">
-                    <button type="submit" class="btn-primary">Guardar Tarea</button>
-                </div>
-            </form>
-        </section>
-
-        <section class="task-list">
-            <div class="list-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                <h2>Tu Agenda</h2>
-                <button id="btn-delete-all" class="btn-danger-small">Eliminar todo</button>
-            </div>
+    <div class="auth-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="login-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="ejemplo@correo.com" required>
             
-            <div id="task-list-container">
-                <p style="text-align:center; color:gray;">Cargando tareas...</p>
-            </div>
-        </section>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" placeholder="******" required>
+            
+            <button type="submit">Entrar</button>
+        </form>
     </div>
 
-    <script src="main.js"></script>
+    <div class="auth-container">
+        <h2>Registro</h2>
+        <form id="registro-form">
+            <label for="reg-email">Email:</label>
+            <input type="email" id="reg-email" placeholder="nuevo@correo.com" required>
+            
+            <label for="reg-password">Contraseña:</label>
+            <input type="password" id="reg-password" placeholder="Mín. 6 caracteres" required>
+            
+            <button type="submit" style="background-color: #007bff;">Crear Cuenta</button>
+        </form>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
